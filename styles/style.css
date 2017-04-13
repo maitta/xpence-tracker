@@ -92,6 +92,10 @@ hr{
     font-weight: bold;
 }
 
+.disabled{
+    background:grey !important;
+}
+
 .button{
     padding:15px;
     background:#990000;
@@ -133,8 +137,7 @@ hr{
 }
 
 table, tr, td{
-	border: 1px solid green;
-	padding:5px;
+	padding: 15px !important;
 	cursor: pointer;
 }
 
@@ -149,14 +152,19 @@ table {
 
 th {
     text-align: left;
-    background-color: green;
-    color: white;
+    font-size: 16px;
+    background-color: #ffb31a;
+    color: black;
     cursor: default;
-    padding-left: 15px;
+    padding-left: 15px !important;
 }
 
 td {
     padding: 15px;
+}
+
+tr:nth-child(odd) {
+    background: #fff7e6
 }
 
 #tblItems{
@@ -164,6 +172,6 @@ td {
 }
 
 .selected {
-    background-color: black;
-    color: #FFF;
+    background-color: #003333 !important;
+    color: #FFF !important;
 }

@@ -4,14 +4,16 @@
 		<title>SissamenApp - New</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
 		<link rel="stylesheet" type="text/css" href="../styles/style.css">
+		<link rel="stylesheet" type="text/css" href="../libs/bootstrap-3.3.6/css/bootstrap.min.css">
 		<script type="text/javascript" src="../libs/jquery-2.1.4.js"></script>
+		<script src="../libs/bootstrap-3.3.6/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../scripts/dataAccess.js"></script>
 		<script type="text/javascript" src="../scripts/utility.js"></script>
 	</head>
 	<body>
 		<div class="header-title"><label>Select an item:</label></div>
 		<hr/>
-		<div>
+		<div class="main">
 			<table id="tblItems">
 				<tbody>
 					<tr>
@@ -24,7 +26,7 @@
 			<br/>
 			<div class="button-region">
 				<div>
-					<input class="button" id="btnSiss" type="button" value="Sissamen!"/>
+					<input class="button disabled" id="btnSiss" type="button" disabled value="Sissamen!"/>
 				</div>
 				<div class="button-right">
 					<a class="button" href="dashboard.html">Back</a>
@@ -36,7 +38,7 @@
 
 				var renderItems = function(tx, result){
 					for (var i=0; i < result.rows.length; i++) {	
-						var row = "<tr id='?' onclick='utility.selectRow(?);'>" + 
+						var row = "<tr id='?' onclick='utility.selectRow(?);utility.enableButton(\"btnSiss\")'>" + 
 							"\n" + 
 							"<td>?</td><td>?</td><td>?</td>" + 
 							"\n" + 

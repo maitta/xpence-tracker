@@ -24,6 +24,11 @@ var utility = (function(){
 		$("#" + id).addClass('selected').siblings().removeClass('selected');
 	};
 
+	utility.enableButton = function(id){
+		$("#"+id).removeAttr('disabled');
+		$("#"+id).removeClass('disabled');
+	}
+
 
 	return utility;
 })();
