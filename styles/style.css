@@ -1,0 +1,160 @@
+body {
+    font-family: arial, tahoma, verdana;
+    font-size:16px;
+    background:#E6E6E6;
+}
+
+a{
+    text-decoration: none;
+}
+
+.splash{
+    width: 100%;
+    height: 100%;
+    background:#030300;
+    z-index: 10;
+    position: fixed;
+    text-align: center;
+}
+
+.splash-text{
+    color: #990000;
+    font-size:55px;    
+    position:relative;
+}
+
+.inner-splash{
+    background-color:white;
+    padding:55px;
+    position: fixed;
+    left: 25%;
+    top: 40%;
+}
+
+hr{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 5px solid #ccc;
+    padding: 0;
+}
+
+.header-title{
+    background-color: #003333;
+    border-radius: 10px;
+    font-size: 28px;
+    padding:20px;
+    color:white;
+}
+
+#dashboard{
+}
+
+#divMain{
+    margin: 25px 25px 25px;
+}
+
+.div-dashboard-element{
+    margin:15px;
+}
+
+.dashboard-element{
+    border-radius: 5px;
+    background-color: #003333;
+    color:white;
+    padding:5px;
+    margin:5px;
+}
+
+.dashboard-element-last{
+    border-radius: 5px;
+    padding:5px;
+    background: #990000;
+    color:white;
+    float:right;
+    font-weight: bold;
+}
+
+.div-aggregate{
+    background:#003333;
+    color:white;
+    padding:10px;
+    margin:5px;
+    border-radius: 5px;
+}
+
+#spnTotal, #spnPercent{
+    float:right;
+    font-weight: bold;
+}
+
+.button{
+    padding:10px;
+    background:#990000;
+    border-radius:5px;
+    color:white;
+    text-align: center;
+    vertical-align: middle;
+    float:left;
+}
+
+.button-right{
+    margin-left:25px;
+    float:right;
+}
+
+.button-region{
+    width:100%;
+    margin-top:20px;
+    display:inline-block;
+}
+
+.text-box{
+	width:350px;
+    height:25px;
+}
+
+.price-box{
+	width:50px;
+    height:25px;
+}
+
+.form{
+    margin-top:25px;
+}
+
+table, tr, td{
+	border: 1px solid green;
+	padding:5px;
+	cursor: pointer;
+}
+
+tr{
+    height: 45px;
+}
+
+table {
+    border-collapse: collapse;
+    width:100%;
+}
+
+th {
+    text-align: left;
+    background-color: green;
+    color: white;
+    cursor: default;
+    padding-left: 15px;
+}
+
+td {
+    padding: 15px;
+}
+
+#tblItems{
+
+}
+
+.selected {
+    background-color: black;
+    color: #FFF;
+}

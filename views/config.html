@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Configuration</title>
+		<link rel="stylesheet" type="text/css" href="../styles/style.css">
+		<script type="text/javascript" src="../libs/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../scripts/dataAccess.js"></script>
+		<script type="text/javascript" src="../scripts/utility.js"></script>
+	</head>
+	<body>
+		<div class="header-title"><label>Insert item</label></div>
+		<hr/>
+		<div class="form">
+			<label class="form-label">Name:</label>
+			<input id="txtItem" type="textbox" class="text-box"/>
+		</div>
+		<div class="form">
+			<label class="form-label">Price:</label>
+			<input id="txtPrice" type="textbox" class="price-box"/>
+		</div>
+		<div class="form">
+			<label class="form-label">Comment:</label>
+			<input id="txtComment" type="textbox" class="text-box">
+		</div>
+		<input class="button" id="btnSubmit" type="button" value="Insert"/>
+
+		<script type="text/javascript">
+			$('document').ready(function(){
+				$('#btnSubmit').bind('click', function(){
+					dataAccess.insertItemToDb($('#txtItem').val(), $('#txtPrice').val(), $('#txtComment').val());
+				});
+
+				//dataAccess.readItemFromDb();
+				$('#divItems').append('test');
+			});
+		</script>
+	</body>	
+</html>

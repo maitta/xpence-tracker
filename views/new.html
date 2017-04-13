@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>New</title>
+		<link rel="stylesheet" type="text/css" href="../styles/style.css">
+		<script type="text/javascript" src="../libs/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../scripts/dataAccess.js"></script>
+		<script type="text/javascript" src="../scripts/utility.js"></script>
+	</head>
+	<body>
+		<div class="header-title"><label>Select an item:</label></div>
+		<hr/>
+		<table id="tblItems">
+			<tbody>
+				<tr>
+					<th>Item</th>					
+					<th>Description</th>
+					<th>Price</th>
+				</tr>
+			</tbody>			
+		</table>
+		<br/>
+		<input class="button" id="btnSiss" type="button" value="sissamen!"/>
+
+		<script type="text/javascript">
+			$('document').ready(function(){
+
+				var renderItems = function(tx, result){
+					for (var i=0; i < result.rows.length; i++) {	
+						var row = "<tr id='?' onclick='utility.selectRow(?);'>" + 
+							"\n" + 
+							"<td>?</td><td>?</td><td>?</td>" + 
+							"\n" + 
+							"</tr>";
+						row = row.replace('?', result.rows.item(i).id).
+								replace('?', result.rows.item(i).id).
+								replace('?', result.rows.item(i).name).
+								replace('?', result.rows.item(i).comment).
+								replace('?', result.rows.item(i).price);								
+						$("#tblItems > tbody:last-child").append(row);
+					}
+				};
+
+				dataAccess.getAllItemsFromDb(renderItems);
+
+				$("#btnSiss").click(function(){
+					var selItm = getSelectedItemId();
+					dataAccess.insertConsumptionToDb(selItm);
+				});
+
+				var getSelectedItemId = function(){
+					return $('.selected').attr('id');
+				};
+			});
+		</script>
+	</body>
+</html>

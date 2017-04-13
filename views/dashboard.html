@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dashboard</title>
+		<link rel="stylesheet" type="text/css" href="../styles/style.css">		
+		<script type="text/javascript" src="../libs/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../scripts/dataAccess.js"></script>
+		<script type="text/javascript" src="../scripts/utility.js"></script>
+	</head>
+	<body id="dashboard">
+		<div class="header-title"><label>Dashboard</label></div>
+		<hr/>
+		<div id="divMain"></div>
+		<div class="div-aggregate">
+			<label>Total:</label>
+			<span id="spnTotal"></span>
+		</div>
+		<div class="div-aggregate">
+			<label>Percentage:</label>
+			<span id="spnPercent"></span>
+		</div>
+		<div class="button-region">
+			<div class="button">
+				<a class="button" href="new.html">New</a>
+			</div>
+			<div class="button button-right">
+				<a class="button" href="config.html">Config</a>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$('document').ready(function(){
+
+				/*var renderConsumptions = function(tx, result){
+					for (var i=0; i < result.rows.length; i++) {
+						var id = result.rows[i].id;
+						var itmName = result.rows[i].name;
+						var price = result.rows[i].price;
+
+						var element = "<div class='div-dashboard-element'>" +
+										"<span class='dashboard-element'>" +
+										"?" +
+										"</span>" + 
+										"<span class='dashboard-element'>" +
+										"?" +
+										"</span>" +
+										"<span class='dashboard-element-last'>" +
+										"?" +
+										"</span>" +
+										"</div>";
+						element = element.replace("?", id).
+										replace("?", itmName).
+										replace("?", price);
+
+						$("#divMain").append(element);
+					}
+				};
+				dataAccess.getAllConsumptionsFromDb(renderConsumptions);
+
+				var renderTotal = function(tx, result){
+					var total = result.rows[0].total;
+					setTotal(total);
+					setPercentage(total);
+				};
+
+				var setTotal = function(total){
+					$("#spnTotal").append(total);
+				};
+				var setPercentage = function(total){
+					var percent = (total * 100)/400;
+					$("#spnPercent").append(percent + "%");
+				};
+
+				dataAccess.getTotal(renderTotal);*/
+			});
+		</script>
+	</body>
+</html>

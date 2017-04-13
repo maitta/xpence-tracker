@@ -1,0 +1,5 @@
+DB
+----------------
+
+Entity: item {id-->PK, name-->AK, price, comment, createdOn}
+Entity: Consumption {id-->PK, name-->FK, quantity, comment, createdOn}
