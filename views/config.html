@@ -13,7 +13,7 @@
 	<body>
 		<div class="header-title"><label>Insert item</label></div>
 		<hr/>
-		<div class="main">
+		<form role="form" class="main">
 			<div class="form-group">
 				<label for="txtItem">Name:</label>
 				<input class="form-control" id="txtItem" type="textbox" class="text-box"/>
@@ -38,12 +38,39 @@
 		<script type="text/javascript">
 			$('document').ready(function(){
 				$('#btnSubmit').bind('click', function(){
-					dataAccess.insertItemToDb($('#txtItem').val(), $('#txtPrice').val(), $('#txtComment').val());
+					if(!checkForEmpty()){
+						dataAccess.insertItemToDb($('#txtItem').val().trim(), $('#txtPrice').val().trim(), 
+							$('#txtComment').val().trim());	
+					}
+					else{
+						console.log("Name and/or price is missing.")
+					}			
 				});
 
+				//test only
 				//dataAccess.readItemFromDb();
-				$('#divItems').append('test');
+				//$('#divItems').append('test');
 			});
+
+			function checkForEmpty(){
+				var hasError = false;
+				if($('#txtItem').val().trim() == ''){
+					$('#txtItem').parent().addClass('has-error');
+					hasError = true;
+				}
+				else{
+					$('#txtItem').parent().removeClass('has-error');
+				}
+				//Check also for only numeric (decimal) values.
+				if($('#txtPrice').val().trim() == '' || !(/^[0-9.]+$/.test($('#txtPrice').val().trim()))){
+					$('#txtPrice').parent().addClass('has-error');
+					hasError = true;
+				}
+				else{
+					$('#txtPrice').parent().removeClass('has-error');
+				}
+				return hasError;				
+			}
 		</script>
 	</body>	
 </html>
