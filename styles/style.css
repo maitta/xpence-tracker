@@ -42,7 +42,6 @@ hr{
 
 .header-title{
     background-color: #003333;
-    border-radius: 10px;
     font-size: 28px;
     padding:20px;
     color:white;
@@ -90,13 +89,14 @@ hr{
 }
 
 .button{
-    padding:10px;
+    padding:15px;
     background:#990000;
     border-radius:5px;
     color:white;
     text-align: center;
     vertical-align: middle;
     float:left;
+    font-size:16px;
 }
 
 .button-right{
@@ -122,6 +122,10 @@ hr{
 
 .form{
     margin-top:25px;
+}
+
+.main{
+    margin: 10px;
 }
 
 table, tr, td{

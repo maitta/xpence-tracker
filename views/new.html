@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>New</title>
+		<title>SissamenApp - New</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
 		<link rel="stylesheet" type="text/css" href="../styles/style.css">
 		<script type="text/javascript" src="../libs/jquery-2.1.4.js"></script>
@@ -11,18 +11,26 @@
 	<body>
 		<div class="header-title"><label>Select an item:</label></div>
 		<hr/>
-		<table id="tblItems">
-			<tbody>
-				<tr>
-					<th>Item</th>					
-					<th>Description</th>
-					<th>Price</th>
-				</tr>
-			</tbody>			
-		</table>
-		<br/>
-		<input class="button" id="btnSiss" type="button" value="sissamen!"/>
-
+		<div>
+			<table id="tblItems">
+				<tbody>
+					<tr>
+						<th>Item</th>					
+						<th>Description</th>
+						<th>Price</th>
+					</tr>
+				</tbody>			
+			</table>
+			<br/>
+			<div class="button-region">
+				<div>
+					<input class="button" id="btnSiss" type="button" value="Sissamen!"/>
+				</div>
+				<div class="button-right">
+					<a class="button" href="dashboard.html">Back</a>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript">
 			$('document').ready(function(){
 

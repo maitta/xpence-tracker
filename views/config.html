@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Configuration</title>
+		<title>SissamenApp - Configuration</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
 		<link rel="stylesheet" type="text/css" href="../styles/style.css">
+		<link rel="stylesheet" type="text/css" href="../libs/bootstrap-3.3.6/css/bootstrap.min.css">
 		<script type="text/javascript" src="../libs/jquery-2.1.4.js"></script>
+		<script src="../libs/bootstrap-3.3.6/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../scripts/dataAccess.js"></script>
 		<script type="text/javascript" src="../scripts/utility.js"></script>
 	</head>
 	<body>
 		<div class="header-title"><label>Insert item</label></div>
 		<hr/>
-		<div class="form">
-			<label class="form-label">Name:</label>
-			<input id="txtItem" type="textbox" class="text-box"/>
-		</div>
-		<div class="form">
-			<label class="form-label">Price:</label>
-			<input id="txtPrice" type="textbox" class="price-box"/>
-		</div>
-		<div class="form">
-			<label class="form-label">Comment:</label>
-			<input id="txtComment" type="textbox" class="text-box">
-		</div>
-		<div class="button-region">
-			<div >
-				<input class="button" id="btnSubmit" type="button" value="Insert"/>
+		<div class="main">
+			<div class="form-group">
+				<label for="txtItem">Name:</label>
+				<input class="form-control" id="txtItem" type="textbox" class="text-box"/>
 			</div>
-			<div class="button button-right">
-				<a class="button" href="dashboard.html">Back</a>
+			<div class="form-group">
+				<label for="txtPrice">Price:</label>
+				<input class="form-control" id="txtPrice" type="textbox" class="price-box"/>
+			</div>
+			<div class="form-group">
+				<label for="txtComment">Comment:</label>
+				<input class="form-control" id="txtComment" type="textbox" class="text-box">
+			</div>
+			<div class="button-region">
+				<div>
+					<input class="button" id="btnSubmit" type="button" value="Insert"/>
+				</div>
+				<div class="button-right">
+					<a class="button" href="dashboard.html">Back</a>
+				</div>
 			</div>
 		</div>
 		<script type="text/javascript">
