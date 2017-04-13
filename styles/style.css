@@ -17,10 +17,11 @@ a{
     text-align: center;
 }
 
-.splash-text{
+.splash-text, a:hover{
     color: #990000;
     font-size:55px;    
     position:relative;
+    text-decoration: none !important;
 }
 
 .inner-splash{
