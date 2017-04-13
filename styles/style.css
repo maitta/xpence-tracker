@@ -101,6 +101,7 @@ hr{
     vertical-align: middle;
     float:left;
     font-size:16px;
+    border-width:0px;
 }
 
 .button-right{
