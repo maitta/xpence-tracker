@@ -9,7 +9,7 @@ var dataAccess = (function(){
 
 	function initDb(){
 		//db name, version, comment, size (10MB)
-		var db = openDatabase('sissamenDb', '0.1', 'DB for the sissamenApp', 10 * 1024 * 1024);	
+		var db = openDatabase('xPenceTrackerDb', '0.1', 'DB for the xPence tracker app', 10 * 1024 * 1024);	
 		db.transaction(function(tx){
 			tx.executeSql("CREATE TABLE IF NOT EXISTS Item (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT UNIQUE, " + 
 				"price REAL, comment TEXT, createdOn TEXT)");
@@ -60,7 +60,7 @@ var dataAccess = (function(){
 			var insert = "INSERT INTO Consumption (itemId, quantity, createdOn) VALUES(?,?,?)";
 			tx.executeSql(insert, [itemId, 1, utility.getDate()]);			
 		});	
-		console.log('New sissamen performed (1). itemId: ' + itemId);
+		console.log('New xpence performed (1). itemId: ' + itemId);
 	};
 
 	//test only!
